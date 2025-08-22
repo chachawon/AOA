@@ -9,3 +9,4 @@
 1) Open in Android Studio (AGP 8.4.2, Kotlin 1.9.24).
 2) Click Run or Build APK(s).
 3) Allow overlay + screen capture + notifications.
+
