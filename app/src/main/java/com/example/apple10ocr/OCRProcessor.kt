@@ -1,4 +1,3 @@
-
 package com.example.apple10ocr
 
 import android.content.Context
@@ -7,13 +6,15 @@ import com.google.android.gms.tasks.Tasks
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.Text
 import com.google.mlkit.vision.text.TextRecognition
-import com.google.mlkit.vision.text.latin.TextRecognizerOptions
+// [수정] import 변경
+import com.google.mlkit.vision.text.korean.KoreanTextRecognizerOptions
 import java.util.concurrent.TimeUnit
 
 data class Cell(val x: Float, val y: Float, val text: String)
 
 class OCRProcessor(ctx: Context) {
-    private val recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
+    // [수정] 한국어 인식기로 명시적으로 초기화
+    private val recognizer = TextRecognition.getClient(KoreanTextRecognizerOptions.Builder().build())
 
     fun process(bitmap: Bitmap): List<Cell> {
         val image = InputImage.fromBitmap(bitmap, 0)
