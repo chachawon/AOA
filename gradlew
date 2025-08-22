@@ -34,8 +34,8 @@ APP_BASE_NAME="$(basename "$0")"
 # Use the maximum available, or set MAX_FD != -1 to use that value.
 MAX_FD="maximum"
 
-# Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
-DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
+# [수정] JVM 옵션을 감싸던 불필요한 내부 따옴표를 제거했습니다.
+DEFAULT_JVM_OPTS='-Xmx64m -Xms64m'
 
 # For Cygwin, ensure paths are in UNIX format before anything is touched.
 if [ -n "${CYGWIN}" ]; then
