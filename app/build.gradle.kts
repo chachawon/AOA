@@ -75,6 +75,6 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.4")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
 
-    implementation("com.google.android.gms:play-services-mlkit-text-recognition:19.0.1")
-    implementation("com.google.android.gms:play-services-mlkit-text-recognition-korean:16.0.1")
+    // [수정] 최신 ML Kit 종속성으로 변경 (한국어 버전은 라틴어도 포함)
+    implementation("com.google.mlkit:text-recognition-korean:16.0.0")
 }
